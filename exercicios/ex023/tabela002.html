@@ -8,11 +8,13 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
+            height: 400vh;
         }
 
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         caption {
@@ -27,9 +29,15 @@
             padding: 10px;
         }
 
-        thead {
+        thead, tfoot {
             background-color: gray;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
         }
 
         tbody > tr:nth-child(even) {
